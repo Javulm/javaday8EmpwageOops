@@ -1,20 +1,22 @@
 package com.bridgelabz;
 
 public class EmpWage {
-	 public static final int IS_PRESENT = 1;
+	 public static final int IS_FULL_TIME = 1;
 	 public static final int IS_PART_TIME = 2;
 	 public static final int SALARY_PER_HR = 20;   
 	public static void employeeAttendace() {
 		double empCheck = Math.floor((Math.random() * 10) % 3);
 		int working_hr = 0;
-		if (empCheck == IS_PRESENT) {
+		switch ((int)empCheck) {
+		case IS_FULL_TIME:
 			System.out.println("Employee is Present");
 			working_hr = 8;
-		} else if (empCheck == IS_PART_TIME) {
+			break;
+		case IS_PART_TIME:
 			System.out.println("Employee is part time Present");
 			working_hr = 4;
-
-		} else {
+			break;
+		default:
 			System.out.println("Employee is Absent");
 			working_hr = 0;
 		}
