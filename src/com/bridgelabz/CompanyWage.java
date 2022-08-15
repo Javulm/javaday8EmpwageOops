@@ -20,13 +20,14 @@ class CompanyWage {
         this.totalEmpWage = totalEmpWage;
     }
 
-    public String toString()
-    {
-        System.out.println("Details of " + COMPANY_NAME + " employee");
-        System.out.println("-----------------------------------------------------");
-        System.err.println("Wage per hour:" + WAGE_PER_HR);
-        System.out.println("Maximum working days:" + MAX_WORKING_DAYS);
-        System.out.println("Maximum working hours:" + MAX_WORKING_HRS);
-        return "Total wage for a month of " + COMPANY_NAME + " employee is " + totalEmpWage + "\n";
-    }
+  @Override
+public String toString() {
+	// TODO Auto-generated method stub
+	  System.out.println("Details of " + COMPANY_NAME + " employee");
+      System.out.println("-----------------------------------------------------");
+      System.err.println("Wage per hour:" + WAGE_PER_HR);
+      System.out.println("Maximum working days:" + MAX_WORKING_DAYS);
+      System.out.println("Maximum working hours:" + MAX_WORKING_HRS);
+	return "Total wage for a month of " + COMPANY_NAME + " employee is " + totalEmpWage + "\n";
+}
 }
