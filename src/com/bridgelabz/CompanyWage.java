@@ -8,7 +8,6 @@ class CompanyWage {
     int totalEmpWage;
 
     CompanyWage(String companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs) {
-
         COMPANY_NAME = companyName;
         WAGE_PER_HR = wagePerHr;
         MAX_WORKING_DAYS = maxWorkingDays;
@@ -19,7 +18,6 @@ class CompanyWage {
     {
         this.totalEmpWage = totalEmpWage;
     }
-
   @Override
 public String toString() {
 	// TODO Auto-generated method stub
