@@ -6,16 +6,16 @@ class DayWage extends EmpWage {
 	static double salary;
 	static void attendanceCheck() {
 		switch ((int) check) {
-		case IS_PRESENT:
-			System.out.println("employee is present.");
-			break;
-		case IS_ABSENT:
-			System.out.println("employee is absent.");
+			case IS_PRESENT :
+				System.out.println("employee is present.");
+				break;
+			case IS_ABSENT :
+				System.out.println("employee is absent.");
 		}
 	}
 
 	void partTimeCheck() {
-		if(check==IS_PART_TIME) {
+		if (check == IS_PART_TIME) {
 			System.out.println("employee is part time present.");
 		}
 	}

@@ -11,12 +11,12 @@ public static double check = Math.floor((Math.random() * 10) % 3);
 public static double check2;
 
 	public static void main(String[] args) {
-		System.out.println("Welcome to employee wage computation.");
+	System.out.println("Welcome to employee wage computation.");
 		DayWage.attendanceCheck(); // static method accessed using class name
-		DayWage part=new DayWage();
+		DayWage part = new DayWage();
 		part.partTimeCheck(); // accessed by creating object
 		DayWage.wage();
-		TotalWage obj2= new TotalWage();
+		TotalWage obj2 = new TotalWage();
 		obj2.wage1();
 	}
 }
