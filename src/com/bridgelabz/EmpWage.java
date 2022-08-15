@@ -61,7 +61,7 @@ public class EmpWage {
 	}
 
 	public static void main(String args[]) {
-		EmpWage tcs = new EmpWage("TCS", 6, 30, 100);
+		EmpWage tcs = new EmpWage("TCS", 10, 20, 100);
 		EmpWage intel = new EmpWage("Intel", 6, 25, 200);
 		tcs.calculateTotalWage();
 		System.out.println(tcs);
