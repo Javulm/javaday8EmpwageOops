@@ -1,5 +1,10 @@
 package com.bridgelabz;
+interface IEmployeeWageComputation
+{
+    public void addCompany(String companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs);
 
+    public void calculateTotalWage();
+}
 public class EmpWage {
 	public static final int PART_TIME = 1;			// instance constants
 	public static final int FULL_TIME = 2;
@@ -14,7 +19,7 @@ public class EmpWage {
         companies = new CompanyWage[noOfCompanies];
         index = 0;
     }
-    void addCompany(String companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs) {
+    public void addCompany(String companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs) {
         companies[index++] = new CompanyWage(companyName, wagePerHr, maxWorkingDays, maxWorkingHrs);
     }
 	int generateEmployeeType() {
@@ -30,7 +35,7 @@ public class EmpWage {
 				return 0;
 		}
 	}
-	 void calculateTotalWage() {
+	public void calculateTotalWage() {
 
 	        for (CompanyWage company : companies) {
 
@@ -42,21 +47,18 @@ public class EmpWage {
 
 	int calculateTotalWage(CompanyWage companyWage) {
 
-		System.out.println(
-				"Computation of total wage of " + companyWage.COMPANY_NAME + " employee");
-		System.out.println(
-				"-----------------------------------------------------");
-		System.out.printf("%5s     %5s     %5s     %5s\n", "Day", "Workinghrs",
-				"Wage", "Total working hrs");
-		int workingHrs;
+		System.out.println("Computation of total wage of " + companyWage.COMPANY_NAME + " employee");
+		System.out.println("-----------------------------------------------------");
+		System.out.printf("%5s     %5s     %5s     %5s\n", "Day", "Workinghrs", "Wage", "Total working hrs");
+		int workingHrs, totalWage = 0;
 		for (int day = 1, totalWorkingHrs = 0; day <= companyWage.MAX_WORKING_DAYS
-				&& totalWorkingHrs <= companyWage.MAX_WORKING_HRS; day++, totalWorkingHrs += workingHrs) {
+				&& totalWorkingHrs <= companyWage.MAX_WORKING_HRS; day++, totalWorkingHrs += workingHrs) 
+		{
 			int empType = generateEmployeeType();
 			workingHrs = getWorkingHrs(empType);
 			int wage = workingHrs * companyWage.WAGE_PER_HR;
 			totalWage += wage;
-			System.out.printf("%5d       %5d      %5d      %5d\n", day,
-					workingHrs, wage, totalWorkingHrs + workingHrs);
+			System.out.printf("%5d       %5d      %5d      %5d\n", day, workingHrs, wage, totalWorkingHrs + workingHrs);
 		}
 	     return totalWage;
 	}
