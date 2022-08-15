@@ -74,6 +74,5 @@ public class EmpWage {
 		String query = "Google";
         int totalWage = employeeWageComputation.getTotalEmpWage(query);
         System.out.println("Total Employee Wage for " + query + " company is " + totalWage);
-
 	}
 }
